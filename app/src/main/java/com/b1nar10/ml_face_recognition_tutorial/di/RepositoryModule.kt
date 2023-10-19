@@ -1,8 +1,7 @@
 package com.b1nar10.ml_face_recognition_tutorial.di
 
 import android.content.Context
-import androidx.room.PrimaryKey
-import com.b1nar10.ml_face_recognition_tutorial.FaceAnalyzerImpl
+import com.b1nar10.ml_face_recognition_tutorial.data.FaceAnalyzerImpl
 import com.b1nar10.ml_face_recognition_tutorial.data.FaceAnalyzerRepository
 import com.b1nar10.ml_face_recognition_tutorial.data.loadFileModel
 import dagger.Module
