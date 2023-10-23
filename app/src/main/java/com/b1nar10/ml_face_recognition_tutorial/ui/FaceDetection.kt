@@ -101,8 +101,8 @@ class FaceDetection(
         // Ensure the bounding box doesn't exceed the bitmap's boundaries
         val left = boundingBox.left.coerceAtLeast(0)
         val top = boundingBox.top.coerceAtLeast(0)
-        val width = boundingBox.width().coerceAtLeast(bitmapImage.width - left)
-        val height = boundingBox.height().coerceAtLeast(bitmapImage.height - top)
+        val width = boundingBox.width().coerceAtMost(bitmapImage.width - left)
+        val height = boundingBox.height().coerceAtMost(bitmapImage.height - top)
 
         return bitmapImage.let {
             Bitmap.createBitmap(

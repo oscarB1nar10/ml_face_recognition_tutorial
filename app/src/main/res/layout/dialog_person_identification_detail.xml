@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ImageView to display the unrecognized face -->
+    <ImageView
+        android:id="@+id/faceImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/face_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter ID"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/faceImageView" />
+
+    <!-- EditText for the user to input the name -->
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_name"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/idEt" />
+
+    <Button
+        android:id="@+id/saveBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+    <Button
+        android:id="@+id/cancelBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@+id/saveBt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,6 +52,7 @@ class GraphicOverlay(context: Context, attrs: AttributeSet) : View(context, attr
             this.previewHeight = previewHeight
             this.facing = facing
         }
+        postInvalidate()
     }
 
     // Draws the overlay with it's associated graphics
